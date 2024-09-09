@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Letter</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f4f0ea;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Password Prompt Styling */
+        #passwordPrompt {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        #passwordInput {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            width: 80%;
+        }
+
+        #submitButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #submitButton:hover {
+            background-color: #c0392b;
+        }
+
+        /* Content Styling */
+        #content {
+            display: none;
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin: 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #e74c3c;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        img {
+            margin: 20px 0;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        audio {
+            margin: 20px 0;
+            width: 100%;
+        }
+
+        .heart {
+            font-size: 100px;
+            color: #e74c3c;
+            margin: 30px 0;
+            animation: pulse 1.5s infinite;
+        }
+
+        /* Heart Animation */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="passwordPrompt">
+        <h1>Enter the Password</h1>
+        <input type="password" id="passwordInput" placeholder="Password">
+        <br>
+        <button id="submitButton" onclick="checkPassword()">Submit</button>
+    </div>
+
+    <div id="content">
+        <div class="heart">❤️</div>
+        
+        
+        <h1>To My Dearest Khadija</h1>
+        <p>
+            I just wanted to take a moment to let you know how much you mean to me.
+            Every day with you is a gift, and I am so incredibly lucky to have you in my life. 
+            You bring so much joy, love, and happiness into my world, and I can’t imagine my life without you.
+            Your smile lights up my darkest days, and your laughter is music to my ears.
+            I promise to always be there for you, to cherish and love you with all my heart.
+        </p>
+        <p>
+            Today, as you begin your first day of classes, I couldn’t let it pass without letting you know how proud I am of you. 
+            I promise to always be there for you, to cherish and love you with all my heart.
+            Seeing you step towards big things in life fills me with so much pride and excitement
+            Miss Vice President, you are truly incredible. 
+            I want you to know that I’m always cheering you on, not just for this semester but for every step you take in life. 
+            I’ll forever be your number one fan.
+        </p>
+        <p>
+            I miss you so much, jaan. Even though we haven’t been able to talk as much lately, not a moment goes by without you on my mind. 
+            I know I’ve been busy, but it’s all for us—so that tomorrow, we can live the dream life we’ve always talked about. 
+            I’m eager to see you grow, and us grow together. 
+            I promise to always strive to be the best version of myself for you, because you deserve nothing but the best.
+        </p>
+        <p>
+            Thank you for being you, my love. I love you more than words can express, today and always.
+        </p>
+        <p>Yours forever,<br>JB</p>
+          <!-- Image added here -->
+          <img src="khadijame.jpg" alt="A special moment">
+          <p>
+            One of my favourite picture and memory with you<3
+          </p>
+    </div>
+
+    <script>
+        function checkPassword() {
+            const password = document.getElementById('passwordInput').value;
+            const correctPassword = '200';
+
+            if (password === correctPassword) {
+                document.getElementById('passwordPrompt').style.display = 'none';
+                document.getElementById('content').style.display = 'block';
+            } else {
+                alert('Incorrect password. Please try again.');
+            }
+        }
+    </script>
+
+</body>
+</html>
